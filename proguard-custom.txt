@@ -140,5 +140,8 @@
     public *;
 }
 
-# Facebook Ads
--keep class com.facebook.ads.** { *; }
+# Keep all classes under com.facebook package
+-keep class com.facebook.** { *; }
+
+# Suppress warnings for any missing dependencies in the com.facebook package
+-dontwarn com.facebook.**
