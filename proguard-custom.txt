@@ -145,3 +145,6 @@
 
 # Suppress warnings for any missing dependencies in the com.facebook package
 -dontwarn com.facebook.**
+
+-keep class androidx.datastore.** { *; }
+-dontwarn androidx.datastore.**
