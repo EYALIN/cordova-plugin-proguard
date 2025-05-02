@@ -148,3 +148,5 @@
 
 -keep class androidx.datastore.** { *; }
 -dontwarn androidx.datastore.**
+-keep class androidx.datastore.preferences.** { *; }
+
