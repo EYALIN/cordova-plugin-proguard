@@ -152,4 +152,13 @@
 
 -keep class com.google.android.ump.** { *; }
 
+# -------------------------------------------------------------
+# ✅ SQLite Plugin: Prevent crash caused by R8 stripping JNI methods
+# -------------------------------------------------------------
+-keep class io.sqlc.** { *; }
+-keep class org.pgsqlite.** { *; }
 
+# Keep all native methods across the app (for JNI compatibility)
+-keepclasseswithmembers class * {
+    native <methods>;
+}
