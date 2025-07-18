@@ -162,3 +162,11 @@
 -keepclasseswithmembers class * {
     native <methods>;
 }
+
+# --- Fix crash in SQLiteNDKNativeDriver.sqlc_db_open --- 
+-keep class io.liteglue.SQLiteNativeResponse {
+    public <init>(...);
+    *;
+}
+-keep class io.liteglue.** { *; }
+
